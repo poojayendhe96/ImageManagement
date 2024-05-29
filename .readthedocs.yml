@@ -15,8 +15,8 @@ versions:
     default: true
 
 # Dependencies and build instructions
-python:
-  version: 3.8
+java:
+  version: "openjdk-17"
   install:
     - requirements: requirements.txt
 
