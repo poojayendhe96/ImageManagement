@@ -4,8 +4,7 @@ version: 2
 build:
   os: ubuntu-20.04  # Specify the OS for the build environment
   tools:
-    java: "openjdk-17"  # Specify the Java version
-    maven: "4.0.0"  # Specify the Maven version
+    python: "3.8"  # Specify the Python version for MkDocs
 
 # Documentation versions
 versions:
@@ -15,12 +14,13 @@ versions:
     default: true
 
 # Dependencies and build instructions
-java:
-  version: "openjdk-17"
+python:
   install:
     - requirements: requirements.txt
 
 # Build commands for the Java project
-commands:
-  - mvn package  # Assuming Maven is used to build the project
-  - mkdocs build
+build:
+  commands:
+    - apt-get update && apt-get install -y openjdk-11-jdk maven  # Install Java and Maven
+    - mvn package  # Assuming Maven is used to build the project
+    - mkdocs build  # Build the documentation using MkDocs
