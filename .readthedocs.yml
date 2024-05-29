@@ -2,7 +2,7 @@ version: 2
 
 # Build configuration
 build:
-  os: ubuntu-18.04  # Or another supported OS
+  os: ubuntu-20.04  # Or another supported OS
 
 # Documentation versions
 versions:
