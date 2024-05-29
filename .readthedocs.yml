@@ -1,8 +1,7 @@
 version: 2
 
-# Build configuration
+# Build configuration with necessary tools and commands
 build:
-  os: ubuntu-20.04  # Specify the OS for the build environment
   tools:
     python: "3.8"  # Specify the Python version for MkDocs
 
