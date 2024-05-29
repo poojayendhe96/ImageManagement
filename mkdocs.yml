@@ -1,0 +1,6 @@
+site_name: ImageManagement
+nav:
+  - Home: index.md
+  # Add more navigation links as needed
+
+repo_url: https://github.com/002922341-pooja/ImageManagement/
