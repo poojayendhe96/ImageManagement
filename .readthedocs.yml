@@ -12,6 +12,10 @@ versions:
     default: true
 
 # Build instructions
+python:
+  version: 3.8
+  install:
+    - requirements: requirements.txt
   script:
+    - mvn package  # Assuming Maven is used to build the JavaFX project
     - mkdocs build
-
