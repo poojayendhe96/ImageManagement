@@ -1,4 +1,17 @@
 version: 2
 
-mkdocs:
-  configuration: mkdocs.yml
+# Build configuration
+build:
+  image: latest
+
+# Documentation versions
+versions:
+  latest:
+    name: Latest
+    identifier: main
+    default: true
+
+# Build instructions
+  script:
+    - mkdocs build
+
