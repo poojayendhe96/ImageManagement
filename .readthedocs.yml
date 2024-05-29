@@ -2,7 +2,10 @@ version: 2
 
 # Build configuration
 build:
-  os: ubuntu-20.04  # Or another supported OS
+  os: ubuntu-20.04  # Specify the OS for the build environment
+  tools:
+    java: "openjdk-17"  # Specify the Java version
+    maven: "4.0.0"  # Specify the Maven version
 
 # Documentation versions
 versions:
@@ -16,6 +19,8 @@ python:
   version: 3.8
   install:
     - requirements: requirements.txt
-  script:
-    - mvn package  # Assuming Maven is used to build the project
-    - mkdocs build
+
+# Build commands for the Java project
+commands:
+  - mvn package  # Assuming Maven is used to build the project
+  - mkdocs build
